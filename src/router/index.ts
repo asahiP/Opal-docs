@@ -12,6 +12,11 @@ const routes = [
     name: 'home',
     redirect: { name: 'installation' },
   },
+  {
+    path: '/component',
+    name: 'component',
+    redirect: { name: 'icon' },
+  },
 
   {
     path: '/installation',
@@ -68,7 +73,7 @@ const routes = [
   {
     path: '/component/radio',
     name: 'radio',
-    // component: Radio,
+    component: () => import('../views/components/Form/Radio.vue'),
     meta: {
       title: '单选框',
       category: '组件',
@@ -78,7 +83,7 @@ const routes = [
   {
     path: '/component/checkbox',
     name: 'checkbox',
-    // component: Checkbox,
+    component: () => import('../views/components/Form/Checkbox.vue'),
     meta: {
       title: '复选框',
       category: '组件',
@@ -88,7 +93,7 @@ const routes = [
   {
     path: '/component/checkbutton',
     name: 'checkbutton',
-    // component: Checkbutton,
+    component: () => import('../views/components/Form/Checkbutton.vue'),
     meta: {
       title: '选项按钮',
       category: '组件',
@@ -98,7 +103,7 @@ const routes = [
   {
     path: '/component/input',
     name: 'input',
-    // component: Input,
+    component: () => import('../views/components/Form/Input.vue'),
     meta: {
       title: '输入框',
       category: '组件',
@@ -108,7 +113,7 @@ const routes = [
   {
     path: '/component/select',
     name: 'select',
-    // component: Select,
+    component: () => import('../views/components/Form/Select.vue'),
     meta: {
       title: '选择器',
       category: '组件',
@@ -118,7 +123,7 @@ const routes = [
   {
     path: '/component/slider',
     name: 'slider',
-    // component: Slider,
+    component: () => import('../views/components/Form/Slider.vue'),
     meta: {
       title: '滑块',
       category: '组件',
@@ -128,7 +133,7 @@ const routes = [
   {
     path: '/component/stepper',
     name: 'stepper',
-    // component: Stepper,
+    component: () => import('../views/components/Form/Stepper.vue'),
     meta: {
       title: '步进器',
       category: '组件',
@@ -138,7 +143,7 @@ const routes = [
   {
     path: '/component/switch',
     name: 'switch',
-    // component: Switch,
+    component: () => import('../views/components/Form/Switch.vue'),
     meta: {
       title: '开关',
       category: '组件',
@@ -148,7 +153,7 @@ const routes = [
   {
     path: '/component/form',
     name: 'form',
-    // component: Form,
+    component: () => import('../views/components/Form/Form.vue'),
     meta: {
       title: '表单',
       category: '组件',
@@ -159,7 +164,7 @@ const routes = [
   {
     path: '/component/table',
     name: 'table',
-    // component: Table,
+    component: () => import('../views/components/Data/Table.vue'),
     meta: {
       title: '表格',
       category: '组件',
@@ -169,7 +174,7 @@ const routes = [
   {
     path: '/component/pagination',
     name: 'pagination',
-    // component: Pagination,
+    component: () => import('../views/components/Data/Pagination.vue'),
     meta: {
       title: '分页',
       category: '组件',
@@ -180,7 +185,7 @@ const routes = [
   {
     path: '/component/alert',
     name: 'alert',
-    // component: Alert,
+    component: () => import('../views/components/Notice/Alert.vue'),
     meta: {
       title: '弹窗',
       category: '组件',
@@ -190,7 +195,7 @@ const routes = [
   {
     path: '/component/toast',
     name: 'toast',
-    // component: Toast,
+    component: () => import('../views/components/Notice/Toast.vue'),
     meta: {
       title: '通知',
       category: '组件',
@@ -200,7 +205,7 @@ const routes = [
   {
     path: '/component/tips',
     name: 'tips',
-    // component: Tips,
+    component: () => import('../views/components/Notice/Tips.vue'),
     meta: {
       title: '提示',
       category: '组件',
@@ -211,7 +216,7 @@ const routes = [
   {
     path: '/component/code',
     name: 'code',
-    // component: Code,
+    component: () => import('../views/components/Others/Code.vue'),
     meta: {
       title: '代码',
       category: '组件',
@@ -221,7 +226,7 @@ const routes = [
   {
     path: '/component/image',
     name: 'image',
-    // component: Image,
+    component: () => import('../views/components/Others/Image.vue'),
     meta: {
       title: '图片',
       category: '组件',
@@ -231,7 +236,7 @@ const routes = [
   {
     path: '/component/scroll',
     name: 'scroll',
-    // component: Scroll,
+    component: () => import('../views/components/Others/Scroll.vue'),
     meta: {
       title: '滚动条',
       category: '组件',

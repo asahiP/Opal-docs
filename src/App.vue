@@ -24,7 +24,7 @@
             <span class="o-icon-arrow-left footer-nav-icon"></span>
             <span v-text="routeData[currentRouteIndex - 1].meta.title"></span>
           </router-link>
-          <router-link class="footer-nav-right" v-if="currentRouteIndex < routeData.length - 1" :to="routeData[currentRouteIndex + 1].path">
+          <router-link class="footer-nav-right" v-if="currentRouteIndex >= 0 && currentRouteIndex < routeData.length - 1" :to="routeData[currentRouteIndex + 1].path">
             <span v-text="routeData[currentRouteIndex + 1].meta.title"></span>
             <span class="o-icon-arrow-right footer-nav-icon"></span>
           </router-link>
@@ -63,13 +63,13 @@ interface nav {
   filters: {
     camel (val: string): string {
       return typeof val === 'string'
-        ? val.slice(0, 1).toLocaleUpperCase() + val.slice(1)
+        ? val.charAt(0).toLocaleUpperCase() + val.slice(1)
         : ''
     }
   }
 })
 export default class App extends Vue {
-  routeData: route[] = routes.slice(1)
+  routeData: route[] = routes.slice(2)
 
   get navData (): nav {
     let nav: nav = {}
@@ -263,12 +263,16 @@ html, body {
         color: $white;
         font-family: $default-font-family;
 
-        background: $primary-light-color;
+        background: $dark-gray;
 
         *, *:hover, *:visited, *:active {
           color: $white;
           font-family: $default-font-family;
         }
+      }
+
+      .wrapper > * {
+        margin-right: $space-base;
       }
 
       .wrapper::after {

@@ -5,7 +5,7 @@
     <o-code :text="usage"></o-code>
     <h2>可用图标</h2>
     <div class="wrapper">
-      <div class="icon" v-for="item of icon" :key="`icon-className-${item}`">
+      <div class="icon" v-for="item of icon" :key="`icon-className-${item}`" style="margin: -1px -1px 0 0">
         <p><span :class="[item, 'icon-main']"></span></p>
         <p v-text="item" style="line-height: 1.4"></p>
       </div>
@@ -40,8 +40,6 @@ $color-dark: rgb(105, 105, 105);
   width: 130px;
   height: 130px;
 
-  margin-top: -1px;
-  margin-right: -1px;
   padding: 10px;
 
   border: 1px solid $color;

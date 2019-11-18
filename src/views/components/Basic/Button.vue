@@ -40,7 +40,7 @@
       <o-button type="default" icon="o-icon-zoom-in" circle></o-button>
       <o-button type="default" icon="o-icon-zoom-out" circle></o-button>
     </div>
-    <o-code :text="Circle"></o-code>
+    <o-code :text="Circle" lang="html"></o-code>
     <h2>Props</h2>
     <o-table :data="Props"></o-table>
   </article>
@@ -86,7 +86,6 @@ export default class Button extends Vue {
   `
 
   Circle: string = `
-    <!-- 圆形按钮与图标互不依赖，可以分开使用 -->
     <template>
       <o-button type="default" icon="o-icon-plus" circle></o-button>
       <o-button type="default" icon="o-icon-minus" circle></o-button>
@@ -117,11 +116,3 @@ export default class Button extends Vue {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-$space: 15px;
-.wrapper * {
-  margin-top: $space;
-  margin-right: $space;
-}
-</style>
