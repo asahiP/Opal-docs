@@ -118,6 +118,7 @@ export default class App extends Vue {
 
 <style lang="scss">
 @import './styles/variable.scss';
+@import './styles/github-markdown.css';
 
 * {
   margin: 0;

@@ -48,6 +48,16 @@ const routes = [
       classes: 'QuickStart',
     }
   },
+  {
+    path: '/changelog',
+    name: 'changelog',
+    component: () => import('../views/quick-start/Changelog.vue'),
+    meta: {
+      title: '更新日志',
+      category: '快速上手',
+      classes: 'QuickStart',
+    }
+  },
 
   {
     path: '/component/icon',

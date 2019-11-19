@@ -23,12 +23,16 @@
       </div>
     </div>
     <h2>懒加载</h2>
-    <p>你可以在控制台限制带宽来更好地观察懒加载的效果。</p>
+    <p>
+      Opal需要你在需要监听的元素的滚动事件中调用 <code>$lazy</code> 函数。<br>
+      你可以在控制台限制带宽来更好地观察懒加载的效果。
+    </p>
     <div class="wrapper" style="height: 300px">
       <o-scroll :hook="$lazy">
         <o-image v-for="(img, index) in demoPics" :key="img" :src="img" height="500" :lazy="index !== 0"/>
       </o-scroll>
     </div>
+    <o-code :text="demo2Code" lang="html"></o-code>
     <h2>Props</h2>
     <o-table :data="Props"></o-table>
   </article>
@@ -66,23 +70,24 @@ export default class ImageDocs extends Vue {
 
   demo2Code: string = `
     <template>
-      <o-code lang="javascript">
-        <pre>
-          function shuffle (arr) {
-            let copy = arr.concat()
-            let len = copy.length
-            
-            while (len) {
-              let random = Math.floor(Math.random() * len--);
-              [copy[random], copy[len]] = [copy[len], copy[random]]
-            }
-
-            return copy
-          }
-        </pre>
-      </o-code>
+      <div style="height: 300px">
+        <o-scroll :hook="$lazy">
+          <o-image v-for="(img, index) in demoPics" :key="img" :src="img" height="500" :lazy="index !== 0"/>
+        </o-scroll>
+      </div>
     </template>
-  `
+    <code>
+      const demoPics = []
+
+      for (let i = 1; i <= 8; i++) {
+        demoPics.push(require(\`@/assets/demo/pic\${i}.jpg\`))
+      }
+
+      data () {
+        return { demoPics }
+      }
+    </code>
+  `.replace(/code/g, 'script')
 
   Props: any = {
     head: [

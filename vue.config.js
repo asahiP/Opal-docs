@@ -1,4 +1,4 @@
 module.exports = {
   outputDir: 'docs',
-  publicPath: '/Opal-docs/'
+  publicPath: process.env.NODE_ENV === 'production' ? '/Opal-docs/' : '/'
 }

@@ -5,11 +5,12 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "md2vue": "node md2vue ./src/assets/changelog.md ./src/views/quick-start/Changelog.vue"
   },
   "dependencies": {
     "core-js": "^3.3.2",
-    "opal-ui": "^0.0.2",
+    "opal-ui": "0.0.4",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.3.0",
@@ -17,6 +18,7 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@types/marked": "^0.7.2",
     "@vue/cli-plugin-babel": "^4.0.0",
     "@vue/cli-plugin-eslint": "^4.0.0",
     "@vue/cli-plugin-typescript": "^4.0.0",
@@ -24,6 +26,7 @@
     "@vue/eslint-config-typescript": "^4.0.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "marked": "^0.7.0",
     "sass": "^1.19.0",
     "sass-loader": "^8.0.0",
     "typescript": "~3.5.3",

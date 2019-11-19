@@ -2,7 +2,7 @@
   <article>
     <h1>安装</h1>
     <h2>npm 安装</h2>
-    <o-code>
+    <o-code lang="bash">
       <pre>
         $ npm install opal-ui --save
       </pre>
