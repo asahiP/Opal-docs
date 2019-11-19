@@ -144,8 +144,8 @@ html, body {
   
   width: $app-size;
   height: $app-size;
-  min-width: 1366 - ($app-space * 2);
-  min-height: 625 - ($app-space * 2);
+  min-width: 720px;
+  min-height: 480px;
   overflow: hidden;
 
   margin: auto;
