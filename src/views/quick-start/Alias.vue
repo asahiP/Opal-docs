@@ -88,18 +88,18 @@ interface validationResults {
 
 @Component
 export default class Alias extends Vue {
-  currentVersion: string = 'v0.0.2'
+  currentVersion: string = '^0.0'
   defaultFilename: string = 'alias-declaration'
 
   versions: any[] = [
-    { value: 'v0.0.2' }
+    { value: '^0.0' }
   ]
   formData: formData = {
     version: this.currentVersion
   }
 
   templates: any = {
-    'v0.0.2': `
+    '^0.0': `
       import Vue from 'vue'
 
       type type = 'info' | 'success' | 'warning' | 'error'
@@ -181,7 +181,8 @@ export default class Alias extends Vue {
         msg: '这个操作会发起一个下载任务，是否继续？',
         confirm: '继续',
         cancel: '取消',
-      }).then(() => {
+      })
+      .then(() => {
         let { code }: any = this.$refs
         let declaration = code.formattedCode.join('\n')
   
@@ -191,6 +192,7 @@ export default class Alias extends Vue {
   
         mission.click()
       })
+      .catch(() => {})
     } else {
       this.$alert({ type: 'error', msg: '你必须先填写文件名后才能下载。' })
     }

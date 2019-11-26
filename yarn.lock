@@ -5704,10 +5704,10 @@ onetime@^5.1.0:
   dependencies:
     mimic-fn "^2.1.0"
 
-opal-ui@0.0.5:
-  version "0.0.5"
-  resolved "https://registry.npm.taobao.org/opal-ui/download/opal-ui-0.0.5.tgz#de23aa721e076e153b9c4a092af6945fc18d1127"
-  integrity sha1-3iOqch4HbhU7nEoJKvaUX8GNESc=
+opal-ui@0.0.6:
+  version "0.0.6"
+  resolved "https://registry.npm.taobao.org/opal-ui/download/opal-ui-0.0.6.tgz#59ee02b9eb46998314210acb0ce1e1f661f6ed32"
+  integrity sha1-We4CuetGmYMUIQrLDOHh9mH27TI=
   dependencies:
     highlight.js "^9.15.10"
     navy-scheme "^0.0.1"

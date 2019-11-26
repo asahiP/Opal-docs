@@ -3,7 +3,11 @@
         <article>
           <h1>更新日志</h1>
           <div class="markdown-body">
-          <h3 id="opal--v003----2019--09--18">Opal [ v0.0.3 ] - 2019 / 09 / 18</h3>
+          <h3 id="opal--v006----2019--11--26">Opal [ v0.0.6 ] - 2019 / 11 / 26</h3>
+<ul>
+<li>修复：Alert<code>&lt;Package&gt;</code> 与 Image<code>&lt;Package&gt;</code> 在激活状态下操作路由无法关闭窗口的情况</li>
+</ul>
+<h3 id="opal--v003----2019--11--18">Opal [ v0.0.3 ] - 2019 / 11 / 18</h3>
 <ul>
 <li>新增：CSS文件中全局属性的<code>margin: 0</code>和<code>padding: 0</code></li>
 <li>新增：Input<code>&lt;Package&gt;</code>的<code>Trigger: blur =&gt; blur, input</code></li>
