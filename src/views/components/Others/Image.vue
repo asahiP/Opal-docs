@@ -62,8 +62,10 @@ export default class ImageDocs extends Vue {
     <code>
       const pic0 = require('@/assets/logo.png')
 
-      data () {
-        return { pic0 }
+      export default {
+        data () {
+          return { pic0 }
+        }
       }
     </code>
   `.replace(/code/g, 'script')
@@ -83,8 +85,10 @@ export default class ImageDocs extends Vue {
         demoPics.push(require(\`@/assets/demo/pic\${i}.jpg\`))
       }
 
-      data () {
-        return { demoPics }
+      export default {
+        data () {
+          return { demoPics }
+        }
       }
     </code>
   `.replace(/code/g, 'script')
