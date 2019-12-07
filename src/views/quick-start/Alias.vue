@@ -36,7 +36,7 @@
             <o-input name="lazy" clearable :mismatched="validationResults.lazy && validationResults.lazy.status === 'mismatched'"/>
           </label>
         </div>
-        <o-code style="width: calc(100% - 230px); height: 352px" :text="declarationFileText" ref="code">
+        <o-code style="width: calc(100% - 230px); height: 352px" :text="declarationFileText" ref="code" lang="typescript">
         </o-code>
       </div>
       <div class="generator-layout-bottom">

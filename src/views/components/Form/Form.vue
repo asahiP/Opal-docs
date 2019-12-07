@@ -2,7 +2,8 @@
   <article>
     <h1>表单</h1>
     <p>
-      由Form组件构成，用以收集和校验数据。
+      由Form组件构成，用以收集和校验数据。<br>
+      Opal 使用 <code><a href="https://github.com/asahiP/Navy" target="_blank">Navy</a></code> 对表单数据进行校验。你可以访问上面的链接来查阅规则语法。
     </p>
     <o-tips warning>
       只有含有 <code>name</code> 属性的Form组件会被Opal捕获。
@@ -71,7 +72,7 @@
           ></p>
         </div>
           <o-checkbox name="agree" :price="true">
-            我已阅读并同意 <a href="/#/component/form" target="_blank">服务声明和隐私条款</a>
+            我已阅读并同意 <router-link :to="{ name: 'form' }" target="_blank">服务声明和隐私条款</router-link>
           </o-checkbox>
         <div style="margin-top: 20px;">
           <o-button style="width: 170px; margin-right: 10px" @click="getValidate">
